@@ -23,8 +23,8 @@ export default {
     },
     methods: {
         getMusicInfo(){
-            axios.get(this.url).then(response => {
-                this.cdArray = response.data.response;
+            axios.get(this.url).then(result => {
+                this.cdArray = result.data.response;
             })
         }
     },
@@ -37,5 +37,9 @@ export default {
 </script>
 
 <style lang="scss">
-    
+    .content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 </style>
